@@ -86,11 +86,7 @@ a img {
 
 button {
   text-decoration: none;
-  transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s linear;
 }
 
 button:hover,
@@ -606,6 +602,7 @@ table p {
   top: 0;
   line-height: 51px;
 }
+
 /* 
 .has-submenu:hover>.submenu-nav {
   margin-top: 0;
@@ -625,7 +622,6 @@ table p {
   opacity: 0;
   min-width: 230px;
   pointer-events: none;
-  margin-top: 30px;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -836,6 +832,11 @@ table p {
   opacity: 1;
 }
 
+.show{
+  background: #00000088;
+  display: block !important;
+}
+
 .offcanvas-menu-nav {
   position: relative;
   z-index: 1;
@@ -913,6 +914,7 @@ table p {
 .offcanvas-menu-nav .active>a:not(:only-child):after {
   content: "";
 }
+
 
 /*
 -----------------------------------------------------------------------
@@ -1676,7 +1678,6 @@ table p {
   height: 100%;
   width: 70px;
   font-size: 18px;
-  transition: all .4s;
   color: #fff;
 }
 
@@ -1689,10 +1690,11 @@ table p {
   height: 239px;
 }
 
-.showsearch{
+.showsearch {
   transform: translateY(0px) !important;
   visibility: visible !important;
 }
+
 .aside-search-box-wrapper .offcanvas-header {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
@@ -1739,10 +1741,24 @@ table p {
   position: relative;
 }
 
+.showsec2 {
+  transition: all .4s !important;
+  width: 100% !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+.hidesec1 {
+  transition: all .4s !important;
+  /* transform: translate3d (0px, 0px , 0px) !important; */
+  opacity: 0 !important;
+}
+
 .home-slider-area .home-slider-container .home-slider-wrapper.slider-default .swiper-slide-active .slider-content-area .slider-content .sub-title-box,
 .home-slider-area .home-slider-container .home-slider-wrapper.slider-default .swiper-slide-active .slider-content-area .slider-content .title-box,
 .home-slider-area .home-slider-container .home-slider-wrapper.slider-default .swiper-slide-active .slider-content-area .slider-content .btn-box {
   opacity: 1;
+  transition: all .4s;
   transform: translate(0px, 0px);
   -webkit-transform: translate(0px, 0px);
   -moz-transform: translate(0px, 0px);
@@ -2146,7 +2162,7 @@ table p {
 .home-slider-area .home-slider-container .home-slider-wrapper.slider-default .slider-content-two-area .slider-content .title-box,
 .home-slider-area .home-slider-container .home-slider-wrapper.slider-default .slider-content-two-area .slider-content .desc-box,
 .home-slider-area .home-slider-container .home-slider-wrapper.slider-default .slider-content-two-area .slider-content .btn-box {
-  opacity: 0;
+  /* opacity: 0; */
   transition: all 0.6s ease-out;
   -webkit-transition: all 0.6s ease-out;
   -moz-transition: all 0.6s ease-out;
@@ -3471,6 +3487,11 @@ table p {
   .product-single-thumb .single-product-nav {
     max-width: 100%;
   }
+}
+
+.swiper-slide-visible,
+.swiper-slide-duplicate {
+  transition: all .4s !important;
 }
 
 .product-single-thumb .single-product-nav .swiper-slide-thumb-active img {
@@ -5501,7 +5522,10 @@ table p {
   top: -4px;
   left: 2px;
 }
+.product-action-modal{
+  transition: all .3s linear !important;
 
+}
 .product-action-modal .modal-content {
   border-radius: 0 0 0.3rem 0.3rem;
 }
@@ -6104,7 +6128,7 @@ table p {
 
 .isotope-filter button {
   border-radius: 50px;
-  border: 2px dashed transparent;
+  border: none;
   background-color: #fff;
   color: #000;
   font-size: 16px;
@@ -6115,11 +6139,28 @@ table p {
   outline: none;
   margin: 0 2px;
   padding: 8px 19px 7px;
-  transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
+  transition: none;
+  /* -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out; */
+}
+
+
+.isotope-item {
+  transition: all .3s ease !important;
+}
+
+.scaleshow {
+  transform: scale(1) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.zeroscale {
+  transform: scale(0) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 @media only screen and (max-width: 991px) {
@@ -6147,6 +6188,10 @@ table p {
 
 .isotope-filter button.active {
   border-color: #721b65;
+}
+
+.isotope-filter .active {
+  border: 2px dashed #721b65 !important;
 }
 
 .isotope-filter button:hover {

@@ -3386,7 +3386,7 @@ textarea.form-control-lg {
 }
 
 .fade {
-    transition: opacity .15s linear
+    transition: opacity .15s linear !important;
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -7048,7 +7048,7 @@ textarea.form-control-lg {
     background-color: var(--bs-offcanvas-bg);
     background-clip: padding-box;
     outline: 0;
-    transition: transform .3s ease-in-out
+    transition: all .3s ease-in-out
 }
 
 @media (prefers-reduced-motion:reduce) {

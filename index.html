@@ -786,17 +786,21 @@
                                 <h2 class="title">New Collection</h2>
                             </div>
                             <div class="isotope-filter">
-                                <button class="active" data-filter="*">All</button>
-                                <button data-filter=".filter_new">New</button>
-                                <button data-filter=".filter_best_sellers">Best Sellers</button>
-                                <button data-filter=".filter_featured">Featured</button>
-                                <button data-filter=".filter_on_sall">On Sall</button>
+                                <button onclick="setActiveTab(this) ; showalltools()" class="filter-btn active"
+                                    data-filter="*">All</button>
+                                <button onclick="setActiveTab(this) ; shownewtools()"
+                                    data-filter=".filter_new">New</button>
+                                <button onclick="setActiveTab(this) ; showbesttools()"
+                                    data-filter=".filter_best_sellers">Best Sellers</button>
+                                <button onclick="setActiveTab(this) ; showsfeaturetools()"
+                                    data-filter=".filter_featured">Featured</button>
+                                <button onclick="setActiveTab(this) ;showselltools()" data-filter=".filter_on_sall">On
+                                    Sall</button>
                             </div>
                         </div>
                     </div>
-                    <div class="row isotope-grid" style="position: relative; height: 853.594px;">
-                        <div class="col-sm-6 col-lg-3 isotope-item filter_best_sellers filter_on_sall"
-                            style="position: absolute; left: 0px; top: 0px;">
+                    <div class="row isotope-grid" style="height: auto;">
+                        <div class="col-sm-6 col-lg-3 isotope-item best filter_best_sellers filter_on_sall">
                             <!--== Start Product Item ==-->
                             <div class="product-item">
                                 <div class="product-thumb">
@@ -811,16 +815,16 @@
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <button type="button" class="btn-product-wishlist" data-bs-toggle="modal"
-                                        data-bs-target="#action-WishlistModal">
+                                    <button onclick="wishbtn()" type="button" class="btn-product-wishlist"
+                                        data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
                                         <i class="pe-7s-like"></i>
                                     </button>
                                     <div class="product-action-links">
-                                        <button type="button" class="btn-product-cart" data-bs-toggle="modal"
+                                        <button onclick="cartshow()" type="button" class="btn-product-cart" data-bs-toggle="modal"
                                             data-bs-target="#action-CartAddModal">
                                             <i class="pe-7s-shopbag"></i>
                                         </button>
-                                        <button type="button" class="btn-product-quick-view" data-bs-toggle="modal"
+                                        <button onclick="productshow()" type="button" class="btn-product-quick-view" data-bs-toggle="modal"
                                             data-bs-target="#action-QuickViewModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
@@ -829,8 +833,7 @@
                             </div>
                             <!--== End prPduct Item ==-->
                         </div>
-                        <div class="col-sm-6 col-lg-3 isotope-item filter_new filter_featured"
-                            style="position: absolute; left: 300px; top: 0px;">
+                        <div class="col-sm-6 col-lg-3 isotope-item best feature filter_new filter_featured">
                             <!--== Start Product Item ==-->
                             <div class="product-item">
                                 <div class="product-thumb">
@@ -845,16 +848,16 @@
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <button type="button" class="btn-product-wishlist" data-bs-toggle="modal"
-                                        data-bs-target="#action-WishlistModal">
+                                    <button onclick="wishbtn()" type="button" class="btn-product-wishlist"
+                                        data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
                                         <i class="pe-7s-like"></i>
                                     </button>
                                     <div class="product-action-links">
-                                        <button type="button" class="btn-product-cart" data-bs-toggle="modal"
+                                        <button onclick="cartshow()" type="button" class="btn-product-cart" data-bs-toggle="modal"
                                             data-bs-target="#action-CartAddModal">
                                             <i class="pe-7s-shopbag"></i>
                                         </button>
-                                        <button type="button" class="btn-product-quick-view" data-bs-toggle="modal"
+                                        <button onclick="productshow()" type="button" class="btn-product-quick-view" data-bs-toggle="modal"
                                             data-bs-target="#action-QuickViewModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
@@ -863,8 +866,7 @@
                             </div>
                             <!--== End prPduct Item ==-->
                         </div>
-                        <div class="col-sm-6 col-lg-3 isotope-item filter_best_sellers filter_on_sall"
-                            style="position: absolute; left: 600px; top: 0px;">
+                        <div class="col-sm-6 col-lg-3 isotope-item best filter_best_sellers filter_on_sall">
                             <!--== Start Product Item ==-->
                             <div class="product-item">
                                 <div class="product-thumb">
@@ -879,16 +881,16 @@
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <button type="button" class="btn-product-wishlist" data-bs-toggle="modal"
-                                        data-bs-target="#action-WishlistModal">
+                                    <button onclick="wishbtn()" type="button" class="btn-product-wishlist"
+                                        data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
                                         <i class="pe-7s-like"></i>
                                     </button>
                                     <div class="product-action-links">
-                                        <button type="button" class="btn-product-cart" data-bs-toggle="modal"
+                                        <button onclick="cartshow()" type="button" class="btn-product-cart" data-bs-toggle="modal"
                                             data-bs-target="#action-CartAddModal">
                                             <i class="pe-7s-shopbag"></i>
                                         </button>
-                                        <button type="button" class="btn-product-quick-view" data-bs-toggle="modal"
+                                        <button onclick="productshow()" type="button" class="btn-product-quick-view" data-bs-toggle="modal"
                                             data-bs-target="#action-QuickViewModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
@@ -897,8 +899,7 @@
                             </div>
                             <!--== End prPduct Item ==-->
                         </div>
-                        <div class="col-sm-6 col-lg-3 isotope-item filter_new filter_featured"
-                            style="position: absolute; left: 900px; top: 0px;">
+                        <div class="col-sm-6 col-lg-3 isotope-item best feature filter_new filter_featured">
                             <!--== Start Product Item ==-->
                             <div class="product-item">
                                 <div class="product-thumb">
@@ -913,16 +914,16 @@
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <button type="button" class="btn-product-wishlist" data-bs-toggle="modal"
-                                        data-bs-target="#action-WishlistModal">
+                                    <button onclick="wishbtn()" type="button" class="btn-product-wishlist"
+                                        data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
                                         <i class="pe-7s-like"></i>
                                     </button>
                                     <div class="product-action-links">
-                                        <button type="button" class="btn-product-cart" data-bs-toggle="modal"
+                                        <button onclick="cartshow()" type="button" class="btn-product-cart" data-bs-toggle="modal"
                                             data-bs-target="#action-CartAddModal">
                                             <i class="pe-7s-shopbag"></i>
                                         </button>
-                                        <button type="button" class="btn-product-quick-view" data-bs-toggle="modal"
+                                        <button onclick="productshow()" type="button" class="btn-product-quick-view" data-bs-toggle="modal"
                                             data-bs-target="#action-QuickViewModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
@@ -931,8 +932,7 @@
                             </div>
                             <!--== End prPduct Item ==-->
                         </div>
-                        <div class="col-sm-6 col-lg-3 isotope-item filter_best_sellers filter_on_sall"
-                            style="position: absolute; left: 0px; top: 426.797px;">
+                        <div class="col-sm-6 col-lg-3 isotope-item new sell filter_best_sellers filter_on_sall">
                             <!--== Start Product Item ==-->
                             <div class="product-item">
                                 <div class="product-thumb">
@@ -947,16 +947,16 @@
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <button type="button" class="btn-product-wishlist" data-bs-toggle="modal"
-                                        data-bs-target="#action-WishlistModal">
+                                    <button onclick="wishbtn()" type="button" class="btn-product-wishlist"
+                                        data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
                                         <i class="pe-7s-like"></i>
                                     </button>
                                     <div class="product-action-links">
-                                        <button type="button" class="btn-product-cart" data-bs-toggle="modal"
+                                        <button onclick="cartshow()" type="button" class="btn-product-cart" data-bs-toggle="modal"
                                             data-bs-target="#action-CartAddModal">
                                             <i class="pe-7s-shopbag"></i>
                                         </button>
-                                        <button type="button" class="btn-product-quick-view" data-bs-toggle="modal"
+                                        <button onclick="productshow()" type="button" class="btn-product-quick-view" data-bs-toggle="modal"
                                             data-bs-target="#action-QuickViewModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
@@ -965,8 +965,7 @@
                             </div>
                             <!--== End prPduct Item ==-->
                         </div>
-                        <div class="col-sm-6 col-lg-3 isotope-item filter_new filter_featured"
-                            style="position: absolute; left: 300px; top: 426.797px;">
+                        <div class="col-sm-6 col-lg-3 isotope-item new sell feature filter_new filter_featured">
                             <!--== Start Product Item ==-->
                             <div class="product-item">
                                 <div class="product-thumb">
@@ -981,16 +980,16 @@
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <button type="button" class="btn-product-wishlist" data-bs-toggle="modal"
-                                        data-bs-target="#action-WishlistModal">
+                                    <button onclick="wishbtn()" type="button" class="btn-product-wishlist"
+                                        data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
                                         <i class="pe-7s-like"></i>
                                     </button>
                                     <div class="product-action-links">
-                                        <button type="button" class="btn-product-cart" data-bs-toggle="modal"
+                                        <button onclick="cartshow()" type="button" class="btn-product-cart" data-bs-toggle="modal"
                                             data-bs-target="#action-CartAddModal">
                                             <i class="pe-7s-shopbag"></i>
                                         </button>
-                                        <button type="button" class="btn-product-quick-view" data-bs-toggle="modal"
+                                        <button onclick="productshow()" type="button" class="btn-product-quick-view" data-bs-toggle="modal"
                                             data-bs-target="#action-QuickViewModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
@@ -999,8 +998,7 @@
                             </div>
                             <!--== End prPduct Item ==-->
                         </div>
-                        <div class="col-sm-6 col-lg-3 isotope-item filter_best_sellers filter_on_sall"
-                            style="position: absolute; left: 600px; top: 426.797px;">
+                        <div class="col-sm-6 col-lg-3 isotope-item new sell filter_best_sellers filter_on_sall">
                             <!--== Start Product Item ==-->
                             <div class="product-item">
                                 <div class="product-thumb">
@@ -1015,16 +1013,16 @@
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <button type="button" class="btn-product-wishlist" data-bs-toggle="modal"
-                                        data-bs-target="#action-WishlistModal">
+                                    <button onclick="wishbtn()" type="button" class="btn-product-wishlist"
+                                        data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
                                         <i class="pe-7s-like"></i>
                                     </button>
                                     <div class="product-action-links">
-                                        <button type="button" class="btn-product-cart" data-bs-toggle="modal"
+                                        <button onclick="cartshow()" type="button" class="btn-product-cart" data-bs-toggle="modal"
                                             data-bs-target="#action-CartAddModal">
                                             <i class="pe-7s-shopbag"></i>
                                         </button>
-                                        <button type="button" class="btn-product-quick-view" data-bs-toggle="modal"
+                                        <button onclick="productshow()" type="button" class="btn-product-quick-view" data-bs-toggle="modal"
                                             data-bs-target="#action-QuickViewModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
@@ -1033,8 +1031,7 @@
                             </div>
                             <!--== End prPduct Item ==-->
                         </div>
-                        <div class="col-sm-6 col-lg-3 isotope-item filter_new filter_featured"
-                            style="position: absolute; left: 900px; top: 426.797px;">
+                        <div class="col-sm-6 col-lg-3 isotope-item new feature sell filter_new filter_featured">
                             <!--== Start Product Item ==-->
                             <div class="product-item">
                                 <div class="product-thumb">
@@ -1049,16 +1046,16 @@
                                     </div>
                                 </div>
                                 <div class="product-action">
-                                    <button type="button" class="btn-product-wishlist" data-bs-toggle="modal"
-                                        data-bs-target="#action-WishlistModal">
+                                    <button onclick="wishbtn()" type="button" class="btn-product-wishlist"
+                                        data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
                                         <i class="pe-7s-like"></i>
                                     </button>
                                     <div class="product-action-links">
-                                        <button type="button" class="btn-product-cart" data-bs-toggle="modal"
+                                        <button onclick="cartshow()" type="button" class="btn-product-cart" data-bs-toggle="modal"
                                             data-bs-target="#action-CartAddModal">
                                             <i class="pe-7s-shopbag"></i>
                                         </button>
-                                        <button type="button" class="btn-product-quick-view" data-bs-toggle="modal"
+                                        <button onclick="productshow()" type="button" class="btn-product-quick-view" data-bs-toggle="modal"
                                             data-bs-target="#action-QuickViewModal">
                                             <i class="pe-7s-look"></i>
                                         </button>
@@ -1126,16 +1123,16 @@
                                                     alt="Image-HasTech">
                                             </a>
                                             <div class="product-action">
-                                                <button type="button" class="btn-product-wishlist"
+                                                <button onclick="wishbtn()" type="button" class="btn-product-wishlist"
                                                     data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
                                                     <i class="pe-7s-like"></i>
                                                 </button>
-                                                <div class="product-action-links">
-                                                    <button type="button" class="btn-product-cart"
+                                                <div class="produc  t-action-links">
+                                                    <button onclick="cartshow()" type="button" class="btn-product-cart"
                                                         data-bs-toggle="modal" data-bs-target="#action-CartAddModal">
                                                         <i class="pe-7s-shopbag"></i>
                                                     </button>
-                                                    <button type="button" class="btn-product-quick-view"
+                                                    <button onclick="productshow()" type="button" class="btn-product-quick-view"
                                                         data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
                                                         <i class="pe-7s-look"></i>
                                                     </button>
@@ -1501,7 +1498,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="product-action-view-content">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
+                            <button onclick="wishclose()" type="button" class="btn-close" data-bs-dismiss="modal">
                                 <i class="pe-7s-close"></i>
                             </button>
                             <div class="modal-action-messages">
@@ -1527,7 +1524,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="product-action-view-content">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
+                            <button onclick="cartclose()" type="button" class="btn-close" data-bs-dismiss="modal">
                                 <i class="pe-7s-close"></i>
                             </button>
                             <div class="modal-action-messages">
@@ -1553,7 +1550,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="product-quick-view-content">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal">
+                            <button onclick="productclose()" type="button" class="btn-close" data-bs-dismiss="modal">
                                 <span class="pe-7s-close"></span>
                             </button>
                             <div class="container pt--0 pb--0">
@@ -1610,15 +1607,15 @@
                                                         <div class="inc qty-btn">+</div>
                                                     </div>
                                                 </div>
-                                                <button type="button" class="btn-product-cart" data-bs-toggle="modal"
+                                                <button onclick="cartshow()" type="button" class="btn-product-cart" data-bs-toggle="modal"
                                                     data-bs-target="#action-CartAddModal">
                                                     Add To Cart
                                                 </button>
-                                                <button type="button" class="btn-product-wishlist"
+                                                <button onclick="wishbtn()" type="button" class="btn-product-wishlist"
                                                     data-bs-toggle="modal" data-bs-target="#action-WishlistModal">
                                                     <i class="pe-7s-like"></i>
                                                 </button>
-                                                <button type="button" class="btn-product-quick-view"
+                                                <button onclick="productclose()" type="button" class="btn-product-quick-view"
                                                     data-bs-toggle="modal" data-bs-target="#action-QuickViewModal">
                                                     <i class="pe-7s-look"></i>
                                                 </button>
@@ -1676,8 +1673,8 @@
             aria-labelledby="offcanvasTopLabel">
             <div class="offcanvas-header">
                 <h5 class="d-none" id="offcanvasTopLabel">Aside Search</h5>
-                <button type="button"  class="btn-close search-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
-                        class="pe-7s-close"></i></button>
+                <button type="button" class="btn-close search-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="pe-7s-close"></i></button>
             </div>
             <div class="offcanvas-body">
                 <div class="container pt--0 pb--0">
