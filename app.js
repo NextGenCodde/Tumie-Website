@@ -57,7 +57,6 @@ nextbtn.addEventListener("click", function () {
 
 function setActiveTab(clickedLi) {
   let listItems = document.querySelectorAll(".isotope-filter button");
-
   listItems.forEach((li) => {
     li.classList.remove("active");
   });
@@ -65,7 +64,7 @@ function setActiveTab(clickedLi) {
 }
 
 let ourproducts = document.querySelectorAll(".isotope-item");
-console.log(ourproducts);
+// console.log(ourproducts);
 
 function shownewtools() {
   for (let i = 0; i < ourproducts.length; i++) {
@@ -154,8 +153,6 @@ function showselltools() {
 //add product to wishlist
 
 let wishproduct = document.querySelectorAll(".product-action-modal");
-
-let cartbtnshow = document.querySelectorAll(".btn-product-cart");
 let viewproduct = document.querySelector(".product-cart-view-modal");
 function wishbtn() {
   wishproduct[0].classList.add("show");
@@ -168,20 +165,43 @@ function wishclose() {
 
 //all produt to cart
 
-
 function cartshow() {
   wishproduct[1].classList.add("show");
   viewproduct.classList.remove("show");
 }
 
 function cartclose() {
-    wishproduct[1].classList.remove("show");
+  wishproduct[1].classList.remove("show");
 }
 
 function productshow() {
-    viewproduct.classList.add("show");
+  viewproduct.classList.add("show");
 }
 
 function productclose() {
   viewproduct.classList.remove("show");
+}
+
+let product_quantity = document.querySelector(".pro-qty input");
+let decrease = document.querySelector(".dec");
+let increase = document.querySelector(".inc");
+count = 1;
+
+decrease.addEventListener("click", function () {
+  if (count >= 1) {
+    count--;
+    product_quantity.value = count;
+  }
+});
+
+increase.addEventListener("click", function () {
+  count++;
+  product_quantity.value = count;
+});
+
+/// remoove cart items
+let cartitems = document.querySelectorAll(".aside-product-list-item");
+
+function Remove(num) {
+  cartitems[num].classList.add("removeitem");
 }
