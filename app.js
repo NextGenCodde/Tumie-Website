@@ -164,10 +164,30 @@ function wishclose() {
 }
 
 //all produt to cart
-
+let productparent = document.querySelector(".aside-cart-product-list");
+let cartitems;
+productcount = -1;
 function cartshow() {
   wishproduct[1].classList.add("show");
+
   viewproduct.classList.remove("show");
+  productcount++;
+  productparent.innerHTML += `<li class="aside-product-list-item">
+                        <a onclick="Remove(${productcount})" href="#/" class="remove">×</a>
+                        <a href="single-product.html">
+                            <img src="assets/img/shop/product-mini/2.webp" width="90" height="110" alt="Image-HasTech">
+                            <span class="product-title">Quickiin Mens shoes</span>
+                        </a>
+                        <span class="product-price">1 × £20.00</span>
+                    </li>`;
+
+  /// remoove cart items
+   cartitems = document.querySelectorAll(".aside-product-list-item");
+  
+}
+
+function Remove(num) {
+  cartitems[num].classList.add("removeitem");
 }
 
 function cartclose() {
@@ -188,7 +208,7 @@ let increase = document.querySelector(".inc");
 count = 1;
 
 decrease.addEventListener("click", function () {
-  if (count >= 1) {
+  if (count > 1) {
     count--;
     product_quantity.value = count;
   }
@@ -198,10 +218,3 @@ increase.addEventListener("click", function () {
   count++;
   product_quantity.value = count;
 });
-
-/// remoove cart items
-let cartitems = document.querySelectorAll(".aside-product-list-item");
-
-function Remove(num) {
-  cartitems[num].classList.add("removeitem");
-}
